@@ -1,0 +1,1 @@
+﻿C:\Users\admin\source\repos\PointCloudTools\PointCloudTools\PointCloudTools.vcxproj(50,5): error MSB4019: 未找到导入的项目“C:\Users\admin\Desktop\bob_PCL_Release.props”。请确认 <Import> 声明中的路径正确，且磁盘上存在该文件。

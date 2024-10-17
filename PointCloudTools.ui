@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PointCloudToolsClass</class>
+ <widget class="QMainWindow" name="PointCloudToolsClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1364</width>
+    <height>859</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>点云处理</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="PointCloudTools.qrc">
+    <normaloff>:/PointCloudTools/icon/Selection_Out.svg</normaloff>:/PointCloudTools/icon/Selection_Out.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QDockWidget" name="consoleDock">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>600</y>
+      <width>1361</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>200</width>
+      <height>140</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>524287</width>
+      <height>220</height>
+     </size>
+    </property>
+    <property name="windowTitle">
+     <string>Console</string>
+    </property>
+    <widget class="QWidget" name="dockWidgetContents_7">
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QTableWidget" name="consoleTable">
+        <property name="showGrid">
+         <bool>false</bool>
+        </property>
+        <property name="gridStyle">
+         <enum>Qt::SolidLine</enum>
+        </property>
+        <property name="rowCount">
+         <number>0</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>200</number>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Time</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignLeading|AlignVCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Operation</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignLeading|AlignVCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Operation obeject</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignLeading|AlignVCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Details</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignLeading|AlignVCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Note</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignLeading|AlignVCenter</set>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>0</y>
+      <width>791</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <widget class="QVTKWidget" name="qvtkWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-10</y>
+       <width>791</width>
+       <height>601</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QDockWidget" name="propertyDock">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>280</y>
+      <width>281</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>250</width>
+      <height>233</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="windowTitle">
+     <string>Properties</string>
+    </property>
+    <widget class="QWidget" name="dockWidgetContents_6">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QTableWidget" name="propertyTable">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>180</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <property name="midLineWidth">
+         <number>0</number>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustIgnored</enum>
+        </property>
+        <property name="autoScroll">
+         <bool>true</bool>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="tabKeyNavigation">
+         <bool>true</bool>
+        </property>
+        <property name="showDropIndicator" stdset="0">
+         <bool>true</bool>
+        </property>
+        <property name="dragDropOverwriteMode">
+         <bool>true</bool>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>false</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+        <property name="textElideMode">
+         <enum>Qt::ElideLeft</enum>
+        </property>
+        <property name="horizontalScrollMode">
+         <enum>QAbstractItemView::ScrollPerItem</enum>
+        </property>
+        <property name="showGrid">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="cornerButtonEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="rowCount">
+         <number>4</number>
+        </property>
+        <property name="columnCount">
+         <number>2</number>
+        </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>25</number>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>100</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column>
+         <property name="text">
+          <string>Property</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignLeading|AlignVCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Value</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignLeading|AlignVCenter</set>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QDockWidget" name="dataDock">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>281</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>250</width>
+      <height>233</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>300</width>
+      <height>524287</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="windowTitle">
+     <string>PointCloud</string>
+    </property>
+    <widget class="QWidget" name="dockWidgetContents_5">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QTreeWidget" name="dataTree">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>180</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
+        <column>
+         <property name="text">
+          <string>Point Cloud File</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QDockWidget" name="filterDock">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>0</y>
+      <width>291</width>
+      <height>252</height>
+     </rect>
+    </property>
+    <property name="windowTitle">
+     <string>Filter Config</string>
+    </property>
+    <widget class="QWidget" name="dockWidgetContents_2">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QTabWidget" name="filterTab">
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="filterTab1">
+         <attribute name="title">
+          <string>Passthrough</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_12">
+            <item>
+             <widget class="QLabel" name="axis">
+              <property name="text">
+               <string>Axis</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="axis_input">
+              <item>
+               <property name="text">
+                <string>x</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>y</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>z</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_14">
+            <item>
+             <widget class="QLabel" name="lower_limit">
+              <property name="text">
+               <string>Lower limit</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lower_limit_input">
+              <property name="text">
+               <string>0.0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_15">
+            <item>
+             <widget class="QLabel" name="upper_limit">
+              <property name="text">
+               <string>Upper limit</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="upper_limit_input">
+              <property name="text">
+               <string>1.0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="passthrough_confirm">
+            <property name="text">
+             <string>Confirm</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="filterTab2">
+         <attribute name="title">
+          <string>Statistical</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_16">
+            <item>
+             <widget class="QLabel" name="negative">
+              <property name="text">
+               <string>Negative Select</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="negative_input">
+              <item>
+               <property name="text">
+                <string>True</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>False</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_17">
+            <item>
+             <widget class="QLabel" name="meank">
+              <property name="text">
+               <string>Mean K</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="meank_input">
+              <property name="text">
+               <string>50</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_18">
+            <item>
+             <widget class="QLabel" name="stddev">
+              <property name="text">
+               <string>Standard deviation</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="stddev_input">
+              <property name="text">
+               <string>1.0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="statistical_confirm">
+            <property name="text">
+             <string>Confirm</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QDockWidget" name="regionGrowingDock">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>250</y>
+      <width>291</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="windowTitle">
+     <string>Region Growing Config</string>
+    </property>
+    <widget class="QWidget" name="dockWidgetContents">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="0">
+       <widget class="QTabWidget" name="rgTab">
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="rgTab1">
+         <attribute name="title">
+          <string>Basic</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="ksearch">
+              <property name="text">
+               <string>K Search</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="ksearch_input">
+              <property name="text">
+               <string>50</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="min_cluster_size">
+              <property name="text">
+               <string>Min Cluster Size</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="min_cluster_size_input">
+              <property name="text">
+               <string>50</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="max_cluster_size">
+              <property name="text">
+               <string>Max Cluster Size</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="max_cluster_size_input">
+              <property name="text">
+               <string>1000000</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="neighbour_num">
+              <property name="text">
+               <string>Neighbour Num</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="neighbour_num_input">
+              <property name="text">
+               <string>30</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QLabel" name="smoothness_theta">
+              <property name="text">
+               <string>Smoothness Theta</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="smoothness_theta_input">
+              <property name="text">
+               <string>0.052359878</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QLabel" name="curvature">
+              <property name="text">
+               <string>Curvature</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="curvature_input">
+              <property name="text">
+               <string>1.0</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="basic_confirm">
+            <property name="text">
+             <string>Confirm</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="basic_verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="rgTab2">
+         <attribute name="title">
+          <string>Color-Based</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QLabel" name="min_cluster_size2">
+              <property name="text">
+               <string>Min Cluster Size</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="min_cluster_size2_input">
+              <property name="text">
+               <string>100</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QLabel" name="neighbours_dist">
+              <property name="text">
+               <string>Neighbours Dist</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="neighbours_dist_input">
+              <property name="text">
+               <string>10</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <widget class="QLabel" name="point_color_diff">
+              <property name="text">
+               <string>Point Color Diff</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="point_color_diff_input">
+              <property name="text">
+               <string>6</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <widget class="QLabel" name="region_color_diff">
+              <property name="text">
+               <string>Region Color Diff</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="region_color_diff_input">
+              <property name="text">
+               <string>5</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="color_confirm">
+            <property name="text">
+             <string>Confirm</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="color_verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1364</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="open"/>
+    <addaction name="AddAction"/>
+    <addaction name="clear"/>
+    <addaction name="save"/>
+    <addaction name="exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>展示</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>主题</string>
+     </property>
+     <addaction name="actionOrigin"/>
+     <addaction name="actionLight"/>
+     <addaction name="actionDark"/>
+    </widget>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>语言</string>
+     </property>
+     <addaction name="actionEnglish"/>
+     <addaction name="actionChinese"/>
+    </widget>
+    <addaction name="menu_3"/>
+    <addaction name="menu_4"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>滤波</string>
+    </property>
+    <addaction name="actionPassThrough"/>
+    <addaction name="actionStatisticalOutlierRemoval"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_5"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action1_2"/>
+   <addaction name="separator"/>
+   <addaction name="meshsurfaceAction"/>
+   <addaction name="wireframeAction"/>
+   <addaction name="separator"/>
+   <addaction name="pickingaction"/>
+   <addaction name="actionPlanFit"/>
+   <addaction name="sphereAction"/>
+   <addaction name="segmentationAction"/>
+   <addaction name="separator"/>
+   <addaction name="actionPassThrough"/>
+   <addaction name="actionStatisticalOutlierRemoval"/>
+   <addaction name="separator"/>
+   <addaction name="mainwindowaction"/>
+   <addaction name="leftviewaction"/>
+   <addaction name="topviewaction"/>
+   <addaction name="resetviewaction"/>
+   <addaction name="actionRegionGrowing"/>
+   <addaction name="actionColorBasedRegionGrowing"/>
+   <addaction name="separator"/>
+   <addaction name="RegistrationAction"/>
+   <addaction name="showleafnodeaction"/>
+   <addaction name="boxaction"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="open">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="clear">
+   <property name="text">
+    <string>清除</string>
+   </property>
+  </action>
+  <action name="save">
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="action1_2">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/disconnect.svg</normaloff>:/PointCloudTools/icon/disconnect.svg</iconset>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="actionOrigin">
+   <property name="text">
+    <string>原始</string>
+   </property>
+  </action>
+  <action name="actionLight">
+   <property name="text">
+    <string>亮</string>
+   </property>
+  </action>
+  <action name="actionDark">
+   <property name="text">
+    <string>暗</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="text">
+    <string>英语</string>
+   </property>
+  </action>
+  <action name="actionChinese">
+   <property name="text">
+    <string>中文</string>
+   </property>
+  </action>
+  <action name="meshsurfaceAction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/tool_curve.svg</normaloff>:/PointCloudTools/icon/tool_curve.svg</iconset>
+   </property>
+   <property name="text">
+    <string>曲线面片</string>
+   </property>
+  </action>
+  <action name="wireframeAction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/map-gnomonic.svg</normaloff>:/PointCloudTools/icon/map-gnomonic.svg</iconset>
+   </property>
+   <property name="text">
+    <string>曲线网格</string>
+   </property>
+  </action>
+  <action name="AddAction">
+   <property name="text">
+    <string>添加点云模型</string>
+   </property>
+  </action>
+  <action name="actionPlanFit">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/show-gpu-effects.svg</normaloff>:/PointCloudTools/icon/show-gpu-effects.svg</iconset>
+   </property>
+   <property name="text">
+    <string>平面拟合</string>
+   </property>
+  </action>
+  <action name="mainwindowaction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/view_front.svg</normaloff>:/PointCloudTools/icon/view_front.svg</iconset>
+   </property>
+   <property name="text">
+    <string>主视图</string>
+   </property>
+  </action>
+  <action name="leftviewaction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/view_leftside.svg</normaloff>:/PointCloudTools/icon/view_leftside.svg</iconset>
+   </property>
+   <property name="text">
+    <string>左视图</string>
+   </property>
+  </action>
+  <action name="topviewaction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/view_top.svg</normaloff>:/PointCloudTools/icon/view_top.svg</iconset>
+   </property>
+   <property name="text">
+    <string>顶视图</string>
+   </property>
+  </action>
+  <action name="resetviewaction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/view-refresh.svg</normaloff>:/PointCloudTools/icon/view-refresh.svg</iconset>
+   </property>
+   <property name="text">
+    <string>重置视图</string>
+   </property>
+  </action>
+  <action name="exit">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/application-exit.svg</normaloff>:/PointCloudTools/icon/application-exit.svg</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="sphereAction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/snap-nodes-smooth.svg</normaloff>:/PointCloudTools/icon/snap-nodes-smooth.svg</iconset>
+   </property>
+   <property name="text">
+    <string>球面拟合</string>
+   </property>
+  </action>
+  <action name="pickingaction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/window-restore.svg</normaloff>:/PointCloudTools/icon/window-restore.svg</iconset>
+   </property>
+   <property name="text">
+    <string>框选点云</string>
+   </property>
+  </action>
+  <action name="segmentationAction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/dependency.svg</normaloff>:/PointCloudTools/icon/dependency.svg</iconset>
+   </property>
+   <property name="text">
+    <string>分割</string>
+   </property>
+  </action>
+  <action name="actionPassThrough">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/atmosphere.svg</normaloff>:/PointCloudTools/icon/atmosphere.svg</iconset>
+   </property>
+   <property name="text">
+    <string>直通滤波器</string>
+   </property>
+  </action>
+  <action name="actionStatisticalOutlierRemoval">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/clear.svg</normaloff>:/PointCloudTools/icon/clear.svg</iconset>
+   </property>
+   <property name="text">
+    <string>统计异常值去除过滤器</string>
+   </property>
+  </action>
+  <action name="actionRegionGrowing">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/channelmixer.svg</normaloff>:/PointCloudTools/icon/channelmixer.svg</iconset>
+   </property>
+   <property name="text">
+    <string>分割区域</string>
+   </property>
+  </action>
+  <action name="actionColorBasedRegionGrowing">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/filename-moodbar.svg</normaloff>:/PointCloudTools/icon/filename-moodbar.svg</iconset>
+   </property>
+   <property name="text">
+    <string>颜色基础分割区域</string>
+   </property>
+  </action>
+  <action name="RegistrationAction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/office-chart-polar.svg</normaloff>:/PointCloudTools/icon/office-chart-polar.svg</iconset>
+   </property>
+   <property name="text">
+    <string>配准</string>
+   </property>
+  </action>
+  <action name="showleafnodeaction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/object-ungroup-symbolic.svg</normaloff>:/PointCloudTools/icon/object-ungroup-symbolic.svg</iconset>
+   </property>
+   <property name="text">
+    <string>展示叶子节点</string>
+   </property>
+  </action>
+  <action name="boxaction">
+   <property name="icon">
+    <iconset resource="PointCloudTools.qrc">
+     <normaloff>:/PointCloudTools/icon/draw-cuboid.svg</normaloff>:/PointCloudTools/icon/draw-cuboid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>画包围盒</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="PointCloudTools.qrc"/>
+ </resources>
+ <connections/>
+</ui>

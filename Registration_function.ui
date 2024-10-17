@@ -1,0 +1,24 @@
+<UI version="4.0" >
+ <class>Registration_function</class>
+ <widget class="QDockWidget" name="Registration_function" >
+  <property name="objectName" >
+   <string notr="true">Registration_function</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+	<x>0</x>
+	<y>0</y>
+	<width>400</width>
+	<height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Registration_function</string>
+  </property>
+  <widget class="QWidget" name="widget" />
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources/>
+ <connections/>
+</UI>
